@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--{{message|safe}} suveike-->
+<!--    {% for line in lines %}-->
+<!--        <p>{{ line }}</p>-->
+<!--    {% endfor % }-->
+<!--{% if forloop.counter < lines|length %}, {% endif %}-->
+    <h3>{{csv_title | safe}}</h3>
+    {% for line in lines %}
+        <p>
+            {{ line }}
+         </p>
+    {% endfor %}
+{% empty %}
+    <p>Nothing to show.</p>
+{% endfor %}
+</body>
+</html>
